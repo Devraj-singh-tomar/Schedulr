@@ -17,9 +17,31 @@ import Link from "next/link";
 import React from "react";
 import { signOut } from "../lib/auth";
 import { requireUser } from "../lib/hooks";
+import prisma from "../lib/db";
+import { redirect } from "next/navigation";
 
-const Layout = async ({ children }: { children: React.ReactNode }) => {
+const getData = async (userId: string) => {
+  const data = await prisma.user.findUnique({
+    where: {
+      id: userId,
+    },
+
+    select: {
+      userName: true,
+    },
+  });
+
+  if (!data?.userName) {
+    return redirect("/onboarding");
+  }
+
+  return data;
+};
+
+const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
   const session = await requireUser();
+
+  const data = await getData(session.user?.id as string);
 
   const logoutHandler = async () => {
     "use server";
@@ -121,4 +143,4 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default Layout;
+export default DashboardLayout;
