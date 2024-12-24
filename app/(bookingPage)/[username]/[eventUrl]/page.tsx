@@ -105,7 +105,7 @@ const BookingFormRoute = async ({
 
           <Separator orientation="vertical" className="" />
 
-          <RenderCalendar />
+          <RenderCalendar availability={data.user?.availability as any} />
 
           <Separator orientation="vertical" className="" />
         </CardContent>
