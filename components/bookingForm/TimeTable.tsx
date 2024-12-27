@@ -10,7 +10,7 @@ import {
   parse,
 } from "date-fns";
 import Link from "next/link";
-import { GetFreeBusyRequest, GetFreeBusyResponse, NylasResponse } from "nylas";
+import { GetFreeBusyResponse, NylasResponse } from "nylas";
 import { Button } from "../ui/button";
 
 interface AppProps {

@@ -17,8 +17,7 @@ import { useForm } from "@conform-to/react";
 import { parseWithZod } from "@conform-to/zod";
 import { settingsSchema } from "@/app/lib/zodSchemas";
 import { Button } from "./ui/button";
-import { Files, XIcon } from "lucide-react";
-import { Lakki_Reddy } from "next/font/google";
+import { XIcon } from "lucide-react";
 import { UploadDropzone } from "@/app/lib/uploadthing";
 import { toast } from "sonner";
 

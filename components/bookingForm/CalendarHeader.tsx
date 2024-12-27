@@ -4,7 +4,7 @@ import { type AriaButtonProps } from "@react-aria/button";
 import { useDateFormatter } from "@react-aria/i18n";
 import { VisuallyHidden } from "@react-aria/visually-hidden";
 import { CalendarButton } from "./CalendarButton";
-import { ChevronLeft, ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 export function CalendarHeader({
   state,
