@@ -107,7 +107,7 @@ export async function SettingsAction(prevState: any, formData: FormData) {
     },
     data: {
       name: submission.value.fullName,
-      image: submission.value.profileImage,
+      // image: submission.value.profileImage,
     },
   });
 

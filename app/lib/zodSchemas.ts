@@ -53,7 +53,7 @@ export function onboardingSchemaValidation(options?: {
 export const settingsSchema = z.object({
   fullName: z.string().min(2).max(150),
 
-  profileImage: z.string(),
+  // profileImage: z.string(),
 });
 
 export const eventTypeSchema = z.object({

@@ -31,7 +31,7 @@ const SettingsRoute = async () => {
     <SettingsForm
       email={data.email}
       fullName={data.name as string}
-      profileImage={data.image as string}
+      // profileImage={data.image as string}
     />
   );
 };
