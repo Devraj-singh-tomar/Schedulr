@@ -2,6 +2,7 @@ import Logo from "@/public/calendar1.png";
 import Image from "next/image";
 import Link from "next/link";
 import { AuthModal } from "./AuthModal";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const Navbar = () => {
   return (
@@ -13,8 +14,10 @@ export const Navbar = () => {
           Sche<span className="text-primary">dulr</span>
         </h4>
       </Link>
-
-      <AuthModal />
+      <div className="hidden md:flex md:justify-end md:space-x-4">
+        <ThemeToggle />
+        <AuthModal />
+      </div>
     </div>
   );
 };
